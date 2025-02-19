@@ -12,7 +12,9 @@ def tool(description: str):
         func.description = func.__doc__ if func.__doc__ != inspect._empty else description
 
         # generate the parameter schema without agent_context
+        func.is_async = inspect.iscoroutinefunction(func)
         signature = inspect.signature(func)
+        func.is_ctx_required = "agent_context" in signature.parameters
         parameters = {k: v for k, v in signature.parameters.items() if k != "agent_context"}
         func.args_schema = {
             "type": "object",
@@ -32,8 +34,9 @@ def tool(description: str):
         
         async def wrapper(args: Dict[str, Any], agent_context: Any):
             # re-add agent context
-            args["agent_context"] = agent_context   
-            result = await func(**args) if inspect.iscoroutinefunction(func) else func(**args)
+            if func.is_ctx_required:
+                args["agent_context"] = agent_context   
+            result = await func(**args) if func.is_async else func(**args)
             return result
             
         wrapper.name = func.name
