@@ -1,121 +1,63 @@
-import os
-import yaml
+import sys
 from pathlib import Path
+import yaml
+import os
 from dotenv import load_dotenv
-from datetime import datetime
-from typing import Dict, Any
+import asyncio
+
+# Add the project root to the Python path
+sys.path.append(str(Path(__file__).parent.parent.parent))
+
+from mesh.elfa_twitter_intelligence_agent import ElfaTwitterIntelligenceAgent
 
 load_dotenv()
 
-from mesh.elfa_twitter_intelligence_agent import ElfaAPI
-
-def save_results(results: Dict[str, Any], filename: str):
-    """Save test results in a structured YAML file."""
-    script_dir = Path(__file__).parent
-    current_file = Path(__file__).stem
-    base_filename = f"{current_file}_example"
-    output_file = script_dir / f"{base_filename}.yaml"
-    
-    with open(output_file, 'w', encoding='utf-8') as f:
-        yaml.dump(results, f, allow_unicode=True, sort_keys=False)
-    
-    print(f"Test results saved to {output_file}")
-
-def format_results(test_name: str, description: str, input_data: Any, output_data: Any):
-    """Structure results in a human-readable format."""
-    return {
-        "test_name": test_name,
-        "description": description,
-        "input": input_data,
-        "output": output_data,
-        "timestamp": datetime.utcnow().isoformat()
-    }
-
-def run_tests():
-    """Execute API tests and store results in a structured format."""
-    client = ElfaAPI()
-    test_results = {}
-    
+async def run_agent():
+    agent = ElfaTwitterIntelligenceAgent()
     try:
-        print("Running API tests...")
-        
-        # Test 1: API Connectivity Check
-        # test_results['ping_test'] = format_results(
-        #     "Ping Test",
-        #     "Checks if the API is reachable and responding correctly.",
-        #     None,
-        #     client.ping()
-        # )
-        
-        # # Test 2: API Key Status Verification
-        # test_results['key_status_test'] = format_results(
-        #     "API Key Status",
-        #     "Retrieves current API key status, usage, and request limits.",
-        #     None,
-        #     client.get_key_status()
-        # )
-        
-        # Test 3: Search Mentions
-        search_input = {
-            'keywords': ['Heurist', 'HEU', 'gheurist', '$HEU', '@heurist_ai'],
-            'days_ago': 30,
-            'limit': 20
+        # Test with a query for searching mentions
+        agent_input_mentions = {
+            'query': 'Search for mentions of Heurist, HEU, and heurist_ai in the last 30 days'
         }
-        test_results['search_mentions_test'] = format_results(
-            "Search Mentions",
-            "Fetches mentions of specific keywords within a given timeframe.",
-            search_input,
-            client.search_mentions(**search_input)
-        )
-        
-        # Test 4: Retrieve Mentions
-        mentions_input = { 'limit': 100, 'offset': 0 }
-        test_results['get_mentions_test'] = format_results(
-            "Get Mentions",
-            "Retrieves recent mentions from the database.",
-            mentions_input,
-            client.get_mentions(**mentions_input)
-        )
-        
-        # Test 5: Fetch Top Mentions
-        top_mentions_input = {
-            'ticker': '$HEU', 'time_window': '7d', 'page': 1, 'page_size': 50, 'include_account_details': False
+        agent_output_mentions = await agent.handle_message(agent_input_mentions)
+        print(f"Result of handle_message (search mentions): {agent_output_mentions}")
+
+        # Test with a query for trending tokens
+        agent_input_trending = {
+            'query': 'What are the current trending tokens in the last 24 hours?'
         }
-        test_results['top_mentions_test'] = format_results(
-            "Top Mentions",
-            "Finds the most discussed mentions for a specific ticker.",
-            top_mentions_input,
-            client.get_top_mentions(**top_mentions_input)
-        )
-        
-        # Test 6: Fetch Trending Tokens
-        trending_input = {
-            'time_window': '24h', 'page': 1, 'page_size': 50, 'min_mentions': 5
+        agent_output_trending = await agent.handle_message(agent_input_trending)
+        print(f"Result of handle_message (trending tokens): {agent_output_trending}")
+
+        # Test with a query for account analysis
+        agent_input_account = {
+            'query': 'Analyze the Twitter account @heurist_ai'
         }
-        test_results['trending_tokens_test'] = format_results(
-            "Trending Tokens",
-            "Lists tokens trending within the last 24 hours based on mentions.",
-            trending_input,
-            client.get_trending_tokens(**trending_input)
-        )
-        
-        # Test 7: Fetch Account Smart Stats
-        stats_input = { 'username': 'heurist_ai' }
-        test_results['account_stats_test'] = format_results(
-            "Account Smart Stats",
-            "Retrieves engagement and analytics for a specific account.",
-            stats_input,
-            client.get_account_smart_stats(**stats_input)
-        )
-        
-        # Save results
-        save_results(test_results, 'elfa_api_test_results')
-        print("All tests executed successfully.")
-    
-    except Exception as e:
-        print(f"Error encountered: {str(e)}")
-        test_results['error'] = str(e)
-        save_results(test_results, 'elfa_api_test_results_error')
+        agent_output_account = await agent.handle_message(agent_input_account)
+        print(f"Result of handle_message (account analysis): {agent_output_account}")
+
+        # Save the test inputs and outputs to a YAML file for further inspection
+        script_dir = Path(__file__).parent
+        current_file = Path(__file__).stem
+        base_filename = f"{current_file}_example"
+        output_file = script_dir / f"{base_filename}.yaml"
+
+        yaml_content = {
+            'input_mentions': agent_input_mentions,
+            'output_mentions': agent_output_mentions,
+            'input_trending': agent_input_trending,
+            'output_trending': agent_output_trending,
+            'input_account': agent_input_account,
+            'output_account': agent_output_account
+        }
+
+        with open(output_file, 'w', encoding='utf-8') as f:
+            yaml.dump(yaml_content, f, allow_unicode=True, sort_keys=False)
+
+        print(f"Results saved to {output_file}")
+
+    finally:
+        await agent.cleanup()
 
 if __name__ == "__main__":
-    run_tests()
+    asyncio.run(run_agent())

@@ -1,18 +1,207 @@
-search_mentions_test:
-  test_name: Search Mentions
-  description: Fetches mentions of specific keywords within a given timeframe.
-  input:
-    keywords:
-    - Heurist
-    - HEU
-    - gheurist
-    - $HEU
-    - '@heurist_ai'
-    days_ago: 30
-    limit: 20
-  output:
+input_mentions:
+  query: Search for mentions of Heurist, HEU, and heurist_ai in the last 30 days
+output_mentions:
+  response: "**Mentions Analysis for Heurist, HEU, and heurist_ai (Last 30 days)**\n\
+    \n### **Overall Sentiment and Engagement**\n\n* **Sentiment:** Generally Positive\
+    \ (75% of posts have a positive tone, focusing on new features, partnerships,\
+    \ and events)\n* **Engagement:**\n\t+ Total Mentions: 18\n\t+ Total Likes: 1,243\n\
+    \t+ Total Replies: 181\n\t+ Total Reposts: 342\n\t+ Total Views: 143,511 (approx.)\n\
+    \n### **Key Influencers and Their Impact**\n\n1. **@heurist_ai** (Heurist Official\
+    \ Account)\n\t* Mentions: 7\n\t* Engagement: 543 Likes, 63 Replies, 161 Reposts,\
+    \ 33,919 Views\n\t* Impact: Primary source of information, driving engagement\
+    \ with new feature announcements and event participations.\n2. **@artoriatech**\n\
+    \t* Mentions: 1 (with significant impact due to the nature of the content)\n\t\
+    * Engagement: 17 Likes, 4 Replies, 5 Reposts, 1,272 Views\n\t* Impact: Influential\
+    \ in the context of utilizing $HEU for accessing specific AI features.\n3. **@1010430329218371584**\
+    \ (ETHDenver-related account)\n\t* Mentions: 2\n\t* Engagement: 289 Likes, 23\
+    \ Replies, 64 Reposts, 17,616 Views\n\t* Impact: Highlighted Heurist's participation\
+    \ in ETHDenver, contributing to the project's visibility.\n\n### **Notable Trends\
+    \ or Patterns**\n\n1. **Increased Event Participation:** Heurist's involvement\
+    \ in significant events like ETHDenver and the \"Seeds of Agentic Future\" hackathon\
+    \ indicates a strategic push for community engagement and visibility.\n2. **Growing\
+    \ Ecosystem:** Mentions of partnerships (e.g., with Allora for collective intelligence)\
+    \ and new AI models (DeepSeek, Hunyuan) being integrated into the Heurist platform\
+    \ suggest a rapidly expanding ecosystem.\n3. **Token Utility:** Discussions around\
+    \ holding $HEU for accessing premium AI features (e.g., Hunyuan video generation)\
+    \ highlight the token's increasing utility within the Heurist ecosystem.\n\n**Trending\
+    \ Tokens (Implicit from the Data)**\n\n* **HEU (Heurist Token)**\n\t+ Mention\
+    \ Volume: 4 (explicit mentions of token utility or incentives)\n\t+ Engagement\
+    \ Metrics: \n\t\t- Likes: 108 (across relevant mentions)\n\t\t- Replies: 15\n\t\
+    \t- Reposts: 31\n\t\t- Views: 5,153 (approx.)\n\t+ Significant Change/Pattern:\
+    \ Increasing utility within the Heurist ecosystem, incentivizing token holding\
+    \ for premium AI feature access."
+  data:
     success: true
     data:
+    - id: 624687473
+      twitter_id: '1891550010984235349'
+      twitter_user_id: '1715242220591456256'
+      content: 'Seeds of Agentic Future: The Ultimate AI Agent Hackathon is coming...
+
+
+        7007 protocol proud to be part of the sponsors, come build with verifiable
+        AI generated token standard!
+
+
+        February 24th
+
+
+        🔹Up to $900K in funding & exclusive mentorship from Web3 leaders
+
+        🔹$50,000+ in prizes across 4 tracks
+
+
+        Applications open until March 5th. Build the future of AI agents!
+
+
+
+        A huge thank you to our sponsors:
+
+        @heurist_ai @carv_official @cultworld_ @NGC_Ventures @unrealcapitalvc @Lab7007
+        @MoemateAI @saakuru_labs'
+      mentioned_at: '2025-02-17T18:07:20+00:00'
+      type: quote
+      metrics:
+        like_count: 10
+        reply_count: 1
+        repost_count: 1
+        view_count: 2606
+    - id: 624680971
+      twitter_id: '1891544832738459666'
+      twitter_user_id: '1345102860732788740'
+      content: '🌱Seeds of Agentic Future: The Ultimate AI Agent Hackathon is coming...
+
+
+        February 24th
+
+
+        🔹Up to $900K in funding & exclusive mentorship from Web3 leaders
+
+        🔹$50,000+ in prizes across 4 tracks
+
+
+        Applications open until March 5th. Build the future of AI agents!
+
+
+
+        A huge thank you to our sponsors:
+
+        @heurist_ai @carv_official @cultworld_ @NGC_Ventures @unrealcapitalvc @Lab7007
+        @MoemateAI @saakuru_labs'
+      mentioned_at: '2025-02-17T17:46:45+00:00'
+      type: post
+      metrics:
+        like_count: 382
+        reply_count: 77
+        repost_count: 90
+        view_count: 85992
+    - id: 624689797
+      twitter_id: '1891512282401669189'
+      twitter_user_id: '1010430329218371584'
+      content: 'We’re breaking down how AI agents and decentralized infra collide
+        at @ETHDenver with @artoriatech, @heurist_ai founder &amp; other giga brains
+        of Web3 🧠
+
+
+        Stay tuned as we spotlight more panelists—space is limited, so sign up now:  '
+      mentioned_at: '2025-02-17T15:37:25+00:00'
+      type: post
+      metrics:
+        like_count: 100
+        reply_count: 3
+        repost_count: 22
+        view_count: 3739
+    - id: 624661175
+      twitter_id: '1891399684339491106'
+      twitter_user_id: '2611856134'
+      content: 'RT @heurist_ai: If an AI model decides what’s “safe” for you, you
+        better decide where your money goes.
+
+
+        Fully unlocked DeepSeek; live on He…'
+      mentioned_at: '2025-02-17T08:09:59+00:00'
+      type: repost
+      metrics:
+        like_count: 0
+        reply_count: 0
+        repost_count: 14
+        view_count: 0
+    - id: 624661174
+      twitter_id: '1891002846482510332'
+      twitter_user_id: '1736748346566459392'
+      content: 'If an AI model decides what’s “safe” for you, you better decide where
+        your money goes.
+
+
+        Fully unlocked DeepSeek; live on Heurist.'
+      mentioned_at: '2025-02-16T05:53:06+00:00'
+      type: quote
+      metrics:
+        like_count: 44
+        reply_count: 5
+        repost_count: 14
+        view_count: 3021
+    - id: 624571373
+      twitter_id: '1890522775556596134'
+      twitter_user_id: '1374934393140117506'
+      content: 'Thanks to Heurist (@heurist_ai) for being a gold sponsor of DeAl Day:
+        Dawn of the Agents on Feb 26 at ETHDenver!
+
+
+        Heurist enables an open-source, permissionless, community-owned AI cloud powered
+        by decentralized compute.
+
+
+        We really appreciate their support. '
+      mentioned_at: '2025-02-14T22:05:28+00:00'
+      type: post
+      metrics:
+        like_count: 72
+        reply_count: 3
+        repost_count: 18
+        view_count: 3624
+    - id: 624539587
+      twitter_id: '1890332624444383290'
+      twitter_user_id: '1360461034377654272'
+      content: "Which AI framework is your favorite? \n\n@PlaygroundsAI, @ai16zdao,\
+        \ @GAME_Virtuals, @zentients_, @heurist_ai, or maybe one that’s not even on\
+        \ this list?\n\nPick your favorite, build your AI agent, and join our bounty!"
+      mentioned_at: '2025-02-14T09:29:53+00:00'
+      type: quote
+      metrics:
+        like_count: 24
+        reply_count: 0
+        repost_count: 2
+        view_count: 1423
+    - id: 624536709
+      twitter_id: '1890099838169313624'
+      twitter_user_id: '1546942317465964544'
+      content: 'RT @ankr: This is THE event you don’t want to miss at @EthereumDenver
+        🔥
+
+
+        Join us alongside special guests: @heurist_ai, @Somnia_Network , @…'
+      mentioned_at: '2025-02-13T18:04:52+00:00'
+      type: repost
+      metrics:
+        like_count: 0
+        reply_count: 0
+        repost_count: 42
+        view_count: 0
+    - id: 624540938
+      twitter_id: '1890092132247220504'
+      twitter_user_id: '1357979697016094721'
+      content: 'RT @heurist_ai: Four models of the DeepSeek family are available on
+        Heurist. 🚀
+
+        From 671B to 32B parameters, we''ve got models suited for eve…'
+      mentioned_at: '2025-02-13T17:34:15+00:00'
+      type: repost
+      metrics:
+        like_count: 0
+        reply_count: 0
+        repost_count: 16
+        view_count: 0
     - id: 624459142
       twitter_id: '1889742074230317521'
       twitter_user_id: '1010430329218371584'
@@ -30,305 +219,27 @@ search_mentions_test:
       mentioned_at: '2025-02-12T18:23:14+00:00'
       type: post
       metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 0
-        view_count: 0
-    - id: 624420857
-      twitter_id: '1889570383164276958'
-      twitter_user_id: '1481568237624393730'
-      content: .@heurist_ai x @VirtualsNikita = 🔥
-      mentioned_at: '2025-02-12T07:01:00+00:00'
-      type: quote
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 0
-        view_count: 828
-    - id: 624420853
-      twitter_id: '1889422209988596118'
+        like_count: 189
+        reply_count: 20
+        repost_count: 42
+        view_count: 13876
+    - id: 624540937
+      twitter_id: '1887509092236992875'
       twitter_user_id: '1736748346566459392'
-      content: '> Bring Nikita to Life with Heurist Imagine <
+      content: 'Four models of the DeepSeek family are available on Heurist. 🚀
+
+        From 671B to 32B parameters, we''ve got models suited for every task and compute
+        budget.
 
 
-        We''ve trained a custom Nikita model on Heurist Imagine.
-
-        Create unique artworks and compete for a $200 USDC prize pool.
-
-
-        Share your art on X tagging @heurist_ai & @VirtualsNikita
-
-
-        Complete the quest on Intract 🫱 '
-      mentioned_at: '2025-02-11T21:12:13+00:00'
+        Here''s what''s new and why it matters. ↓ '
+      mentioned_at: '2025-02-06T14:30:10+00:00'
       type: post
       metrics:
-        like_count: 22
-        reply_count: 1
-        repost_count: 8
-        view_count: 2251
-    - id: 623078646
-      twitter_id: '1889356412431618098'
-      twitter_user_id: '1866789219613421568'
-      content: '@ApateAI @01SamurAI_Agent @AIagentQQ @agon_agent @0xJamesXXX @Greta0086
-        @heurist_ai @zksync @S4mmyEth @dcfgod @Argo_workflow factually incorrect.
-        the march 2024 report isn''t out yet and argo''s initial commits are public
-        from 2023. careful with unverified claims anon'
-      mentioned_at: '2025-02-11T16:50:45+00:00'
-      type: reply
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 0
-        view_count: 6334
-    - id: 617232115
-      twitter_id: '1888202625348489609'
-      twitter_user_id: '1807613019784200192'
-      content: 'ZK WORLD IN BRIEF | Edition 30: Resilience.
-
-        - 5 minute weekly updates on the @ZKsync and Elastic Network ecosystem
-
-
-        Lens is about to launch their mainnet—they just changed their handle to @LC.
-        Yes, LC! @ZKcandyHQ is preparing to establish its Foundation. Meanwhile, real-world
-        adoption is accelerating in Argentina, where driver’s licenses are now on-chain
-        via the miBA app, powered by @Quark_ID and @ZKsync. And there’s still more
-        to come...
-
-
-        Markets shift but resilience drives builders forward, expanding the Elastic
-        Network and proving that ZK is the endgame!
-
-
-        ==========
-
-
-        In this edition, we bring you some exciting updates on the ZKsync and Elastic
-        Network ecosystem, such as @LC, @Quark_ID, @ZKsyncIgnite, @AbstractChain,
-        @cronos_chain zkEVM, @symbiosis_fi, @ZKcandyHQ, @heurist_ai, @RFX_exchange,
-        @noon_capital, @sophon, @grvt_io, @XPLA_Official, @SpaceandTimeDB, @Treasure_DAO,
-        and @ZKsync.
-
-
-        Stay synced with #ZK!'
-      mentioned_at: '2025-02-08T12:26:01+00:00'
-      type: post
-      metrics:
-        like_count: 178
-        reply_count: 18
-        repost_count: 25
-        view_count: 20040
-    - id: 615727142
-      twitter_id: '1887511874218156323'
-      twitter_user_id: '2611856134'
-      content: 'RT @nani__ooo: Chat with NANI is now available on @heurist_ai, a decentralized
-        cloud for AI models. Speak freely, '
-      mentioned_at: '2025-02-06T14:41:13+00:00'
-      type: repost
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 9
-        view_count: 0
-    - id: 615727141
-      twitter_id: '1887511612057370959'
-      twitter_user_id: '1643190364600422402'
-      content: 'Chat with NANI is now available on @heurist_ai, a decentralized cloud
-        for AI models. Speak freely, '
-      mentioned_at: '2025-02-06T14:40:11+00:00'
-      type: quote
-      metrics:
-        like_count: 26
-        reply_count: 9
-        repost_count: 9
-        view_count: 1532
-    - id: 615696755
-      twitter_id: '1887274895676989887'
-      twitter_user_id: '859484337850523648'
-      content: 'RT @crypto_rand: The #DePIN Market Cap is down 7,5% at $22 Billion
-        currently.
-
-
-        Some Low Cap DePIN projects on my radar: $NATIX, $HEU, $NET…'
-      mentioned_at: '2025-02-05T22:59:33+00:00'
-      type: repost
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 15
-        view_count: 0
-    - id: 615884001
-      twitter_id: '1887127226191339884'
-      twitter_user_id: '1869597068786081792'
-      content: "\U0001F525  Expands Its Global DAO Ecosystem! \U0001F525\n\n is paving\
-        \ the way for decentralized governance with a truly cross-chain DAO launchpad.\
-        \ Originally built on Base, we’re now stepping into new territory by launching\
-        \ our very first DAO project on Solana – a milestone that signals our commitment\
-        \ to uniting communities and innovating across ecosystems. LFG, welcome to\
-        \  on Solana!\n\n1.  – Your Global DAO Launchpad\n • Cross-Chain Vision:\n\
-        \ is designed to empower DAO projects worldwide. Starting on Base and now\
-        \ expanding to Solana, our platform integrates dynamic pools from @MeteoraAG\
-        \ to ensure deep liquidity and a fee structure that incentivizes long-term\
-        \ growth.\n • Innovative Infrastructure:\nWith cutting-edge financial tools\
-        \ and a commitment to community-driven governance,  is setting a new standard\
-        \ for DAO launchpads across multiple blockchains.\n\n2. HypurrDAO (@HypurrDao)\n\
-        \ • Overview:\nHypurrDAO is an AI-driven, Hyperliquid collective dedicated\
-        \ to growing the Hyperliquid ecosystem. With a special focus on the upcoming\
-        \ HyperEVM launch, this project leverages advanced AI to drive strategic investment\
-        \ decisions.\n • Key Features:\n • Strong Technical Team: Led by @0xkeshav_,\
-        \ @DevRUdata, and @cryptosingh_eth, the team is committed to innovation and\
-        \ excellence.\n • HyperAgent: An AI-based ecosystem analyst that monitors\
-        \ network activity and will evolve into an autonomous trading bot using machine\
-        \ learning and data analytics.\n • HyperFund: A treasury dedicated to funding\
-        \ high-potential, AI-focused initiatives within the Hyperliquid ecosystem.\n\
-        \ • Roadmap Highlights:\n • Launch of the Litepaper and activation of the\
-        \ AI analyst.\n • Formation of the Ecosystem Fund and early supporter whitelist.\n\
-        \ • Integration with Hyperliquid mainnet and progression toward an autonomous\
-        \ trading model.\n • On Solana:\nHypurrDAO’s launch on Solana marks a significant\
-        \ step in connecting innovative DAO strategies with one of the fastest-growing\
-        \ blockchain communities.\n\n3. RWOK Capital (@rwokcapital)\n • Mission &\
-        \ Vision:\nRWOK Capital is on a mission to accumulate pristine Remilia assets\
-        \ while redefining community-first funding. This DAO is committed to ensuring\
-        \ that NFT holders always come first.\n • Funding Details:\n • Raise: 100\
-        \ ETH starting February 6.\n • Airdrop: 10% of the DAO supply will be airdropped\
-        \ to RWOK NFT holders (up from the previous 5%), regardless of participation\
-        \ in the funding round.\n • Whitelist Tiers:\n • Normal: For holders of at\
-        \ least 1 RWOK NFT.\n • VIP: For holders of 10+ RWOK NFTs.\n • Public Round:\
-        \ A potential public funding round at a higher price is being considered to\
-        \ further engage the community.\n • $DWL Burn Mechanism:\nTo secure fairness,\
-        \ 1,000,000 $DWL is burned per guaranteed lowest-tier whitelist spot. (For\
-        \ HypurrDAO on Solana, winners must provide their SOL address.)\n • Community\
-        \ Commitment:\nRWOK Capital is built on transparency and is designed to reward\
-        \ all NFT holders through a weighted airdrop model that ensures sustainable\
-        \ growth.\n\n4. YapTrade ($YT) & @YapTradeDAO\n • Exciting New Deal:\nIf you’ve\
-        \ created any YapTradeDAO art, toys, puzzles, shirts, or anything creative,\
-        \ here’s your chance to get it shipped to Amsterdam, The Netherlands – with\
-        \ the shipping fee on us! Just DM for details.\n • Vote Sale Details:\nA new\
-        \ deal has been locked in for the sale of 1 million votes. Here’s how it works:\n\
-        \ • Selection Criteria:\n • We will only pick participants who are ready to\
-        \ follow the buyer’s accounts and write a short content piece about the buyer’s\
-        \ project.\n • Vote Requirements:\n • A minimum of 5000 votes is required\
-        \ (note: this is votes, not Yaps).\n • Conversion:\n • 1 Yap = 100 votes\n\
-        \ • 1 smart follower = 1 vote\n • For example, if you have 48 Yaps and 200\
-        \ smart followers, you’re in. Even 50 Yaps with 0 smart followers qualifies!\n\
-        \ • Get Involved:\nFill in the form here: \n\n5. HardwAIre DAO (@hardwAIreDAO)\n\
-        \ • One Week In – Recap & What’s Next:\nHardwAIre DAO has been busy in its\
-        \ first week since launch. Here’s a quick recap of what’s been accomplished\
-        \ and what’s on the horizon:\n • Partnerships Secured:\n • @AethirCloud: One\
-        \ of the largest decentralized compute platforms, assisting with growth and\
-        \ upcoming announcements.\n • @Heurist_AI: Specializing in AI model deployment,\
-        \ helping build our first three DAO-native agents:\n • Governance Agent: Analyzes\
-        \ proposals and summarizes key insights.\n • Financial Agent: Tracks treasury\
-        \ flows and provides detailed financial reports.\n • GPU Agent: Monitors infrastructure,\
-        \ uptime, and utilization.\n • Advisor Board Announced:\n • @MRRydon (Co-Founder,\
-        \ Aethir) – Strategy & compute partnerships.\n • @EdC (COO, Sophon) – Operational\
-        \ strategy & execution.\n • @hushky6 (Ionet Foundation) – DAO structure &\
-        \ compute client advisory.\n • Major Developments:\n • GPU Dashboard (v1):\
-        \ Real-time tracking of GPU uptime & usage is now live.\n • Treasury Dashboard:\
-        \ Developed by @foxtroteth for transparent tracking of treasury inflows and\
-        \ expenses.\n • Team Introduction & Vision: Led by @nocliffcapital, @Tokenprofessor,\
-        \ @Dknoller, and @sage_tega.\n • Governance System Live:\nThe Snapshot voting\
-        \ system is set up and includes:\n • Staked $HARD (via DWL pools)\n • Vested\
-        \ tokens\n • Liquid tokens\n • $HARD-$ETH UniV3 LP positions\n • What’s Next\
-        \ for HardwAIre DAO:\n • Finalizing Our Hardware Partner: In the final stages\
-        \ of selecting the right provider – announcement coming soon!\n • Expanding\
-        \ Strategic Partnerships: Locking in additional ecosystem partnerships to\
-        \ cement our status as the first decentralized compute provider.\n • Community\
-        \ & Development Growth: With community co-development led by our lead dev\
-        \ @dknoller, exciting updates are on the way.\nWith these projects,  is not\
-        \ only expanding its global footprint but also redefining the way DAOs engage\
-        \ with their communities. From leveraging AI in HypurrDAO and securing innovative\
-        \ funding models in RWOK Capital to creative community deals with YapTrade\
-        \ and cutting-edge compute solutions with HardwAIre DAO – the future of decentralized\
-        \ governance is here.  \n\nJoin us on this journey as we continue to innovate\
-        \ and drive sustainable, community-driven growth across the blockchain ecosystem!"
-      mentioned_at: '2025-02-05T13:12:46+00:00'
-      type: post
-      metrics:
-        like_count: 64
-        reply_count: 8
-        repost_count: 6
-        view_count: 1781
-    - id: 615502764
-      twitter_id: '1887084502440460658'
-      twitter_user_id: '859484337850523648'
-      content: "The #DePIN Market Cap is down 7,5% at $22 Billion currently.\n\nSome\
-        \ Low Cap DePIN projects on my radar: $NATIX, $HEU, $NET \n\nWhat are you\
-        \ targeting?\n\nI read you \U0001F447"
-      mentioned_at: '2025-02-05T10:23:00+00:00'
-      type: post
-      metrics:
-        like_count: 119
-        reply_count: 14
-        repost_count: 14
-        view_count: 11385
-    - id: 614006437
-      twitter_id: '1886892542870085804'
-      twitter_user_id: '1328036947244298242'
-      content: 'RT @0x_zalo: Allora is now integrated with several top frameworks:
-        @elizaOS , @virtuals_io, @sendaifun, @goat_sdk, @heurist_ai, @OxZerePy,…'
-      mentioned_at: '2025-02-04T21:40:13+00:00'
-      type: repost
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 10
-        view_count: 0
-    - id: 614006436
-      twitter_id: '1886874269079961855'
-      twitter_user_id: '1268110202823475201'
-      content: "Allora is now integrated with several top frameworks: @elizaOS , @virtuals_io,\
-        \ @sendaifun, @goat_sdk, @heurist_ai, @OxZerePy, @CoinbaseDev, @Cod3xOrg \n\
-        \nwe're working on more \U0001F609\n\nsmarter agents are coming"
-      mentioned_at: '2025-02-04T20:27:36+00:00'
-      type: quote
-      metrics:
-        like_count: 33
-        reply_count: 0
-        repost_count: 10
-        view_count: 1535
-    - id: 608339069
-      twitter_id: '1886166911207235631'
-      twitter_user_id: '116652043'
-      content: 'RT @heurist_ai: Excited to see @thinkagents'' modular approach to
-        agent standards! This aligns perfectly with our vision of composable AI ag…'
-      mentioned_at: '2025-02-02T21:36:49+00:00'
-      type: repost
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 26
-        view_count: 0
-    - id: 605317594
-      twitter_id: '1885774260448407565'
-      twitter_user_id: '1390144583946969093'
-      content: "Chung Daily Note - 2025/2/1\n\nHappy Saturday! \n\n\U0001F4A1Integrate\
-        \ @AlloraNetwork powered prediction insights into @heurist_ai Agent Framework\
-        \ to build smarter, automated agents\n\n\U0001F4CA Kaito Top 5 Mindshare in\
-        \ the Last 24 Hours\n\n-Token: $ETH 8.99% &gt; $BTC 8.69% &gt; $SOL 7.33%\
-        \ &gt; $AIXBT 3.19% &gt; "
-      mentioned_at: '2025-02-01T19:36:34+00:00'
-      type: post
-      metrics:
-        like_count: 11
-        reply_count: 3
-        repost_count: 2
-        view_count: 654
-    - id: 601993319
-      twitter_id: '1885344877275234718'
-      twitter_user_id: '1233275818983424000'
-      content: 'RT @AlloraNetwork: AI with foresight: @heurist_ai now leverages Allora’s
-        collective intelligence to power smarter AI agents. ✳️
-
-
-        Agents bui…'
-      mentioned_at: '2025-01-31T15:10:21+00:00'
-      type: repost
-      metrics:
-        like_count: 0
-        reply_count: 0
-        repost_count: 23
-        view_count: 0
+        like_count: 59
+        reply_count: 7
+        repost_count: 16
+        view_count: 2891
     - id: 601993318
       twitter_id: '1885344757699751955'
       twitter_user_id: '1752421556494438401'
@@ -341,347 +252,377 @@ search_mentions_test:
       mentioned_at: '2025-01-31T15:09:52+00:00'
       type: post
       metrics:
-        like_count: 87
+        like_count: 89
         reply_count: 11
-        repost_count: 23
-        view_count: 10327
-    - id: 598681443
-      twitter_id: '1884912438400696579'
-      twitter_user_id: '859484337850523648'
-      content: 'Tracking @heurist_ai closely here. Only launched 09/12/24.
+        repost_count: 24
+        view_count: 10462
+    - id: 591641002
+      twitter_id: '1883999486068007086'
+      twitter_user_id: '1407788156670332932'
+      content: 'RT @heurist_ai: DeepSeek @deepseek_ai is now live on Heurist.
 
 
-        Despite the price being down after launch, it recovered almost immediately
-        after The #Deepseek news on Monday.
+        Open source AI just reached new heights.
 
 
-        $HEU started as a miner-powered GPU cluster &amp; now moving to an intelligent
-        #AI fabric. 👀 '
-      mentioned_at: '2025-01-30T10:31:59+00:00'
-      type: quote
-      metrics:
-        like_count: 137
-        reply_count: 16
-        repost_count: 26
-        view_count: 14392
-    - id: 597067068
-      twitter_id: '1884702483400057247'
-      twitter_user_id: '2623870473'
-      content: 'ai with the strongest bounce
-
-        24 hour green across the board
-
-        meme bounce but still red
-
-        coinbase listing $vvv
-
-
-        buying more base AI:
-
-        virtual, aixbt, vvv, rei, acolyt, aion, &amp; heu'
-      mentioned_at: '2025-01-29T20:37:42+00:00'
-      type: quote
-      metrics:
-        like_count: 7
-        reply_count: 0
-        repost_count: 0
-        view_count: 2655
-    - id: 596802671
-      twitter_id: '1884655031212773799'
-      twitter_user_id: '3208751003'
-      content: 'RT @hardwAIreDAO: 1/ Building HardwAIre DAO’s first agents 🤖
-
-
-        In the first stage of this partnership, Heurist will bring their expertise
-        to…'
-      mentioned_at: '2025-01-29T17:29:09+00:00'
+        Access DeepSeek-R1 and DeepSeek-V3…'
+      mentioned_at: '2025-01-27T22:04:15+00:00'
       type: repost
       metrics:
         like_count: 0
         reply_count: 0
-        repost_count: 1
+        repost_count: 39
         view_count: 0
-    - id: 596802670
-      twitter_id: '1884617996255015187'
-      twitter_user_id: '1873881337288851456'
-      content: "1/ Building HardwAIre DAO’s first agents \U0001F916\n\nIn the first\
-        \ stage of this partnership, Heurist will bring their expertise to support\
-        \ the DAO in the development of its three key in-house agents for the DAO:\n\
-        \n\U0001F5F3️ Governance Agent:\n> Analyzes proposals\n> Provides actionable\
-        \ reports\n> Tracks past governance decisions to support better decision-making.\n\
-        \n\U0001F4BBGPU Agent: \n> Monitors hardware performance in real-time\n> Tracking\
-        \ uptime, usage, and idle capacity\n> Provides optimization suggestions for\
-        \ our GPU infrastructure.\n\n\U0001F4B0Financial Agent:\n> Manages treasury\
-        \ flows\n> tracks income and expenses\n> generates detailed financial reports\n\
-        \nThese agents will help automate critical processes and enhance operational\
-        \ efficiency across the DAO."
-      mentioned_at: '2025-01-29T15:01:59+00:00'
-      type: reply
+    - id: 591641001
+      twitter_id: '1883967110684238339'
+      twitter_user_id: '1736748346566459392'
+      content: 'DeepSeek @deepseek_ai is now live on Heurist.
+
+
+        Open source AI just reached new heights.
+
+
+        Access DeepSeek-R1 and DeepSeek-V3 for smarter inference at a fraction of
+        cost.
+
+
+        Try it via Heurist API or explore on Pondera. '
+      mentioned_at: '2025-01-27T19:55:36+00:00'
+      type: post
       metrics:
-        like_count: 19
-        reply_count: 2
-        repost_count: 1
-        view_count: 805
+        like_count: 153
+        reply_count: 14
+        repost_count: 39
+        view_count: 24063
+    - id: 582676126
+      twitter_id: '1882837972976021796'
+      twitter_user_id: '1357979697016094721'
+      content: 'RT @heurist_ai: What if you imagined a cat eating a pizza with pineapple….and
+        AI brought it to life?
+
+
+        We’re bringing Hunyuan, Tencent’s ope…'
+      mentioned_at: '2025-01-24T17:08:48+00:00'
+      type: repost
+      metrics:
+        like_count: 0
+        reply_count: 0
+        repost_count: 26
+        view_count: 0
+    - id: 582676128
+      twitter_id: '1882837955678712176'
+      twitter_user_id: '1357979697016094721'
+      content: 'RT @artoriatech: Hold 10000 $HEU to use Hunyuan video gen for free.
+        Pay-per-use will be supported later'
+      mentioned_at: '2025-01-24T17:08:44+00:00'
+      type: repost
+      metrics:
+        like_count: 0
+        reply_count: 0
+        repost_count: 5
+        view_count: 0
+    - id: 582676127
+      twitter_id: '1882830024446984428'
+      twitter_user_id: '1401949266'
+      content: Hold 10000 $HEU to use Hunyuan video gen for free. Pay-per-use will
+        be supported later
+      mentioned_at: '2025-01-24T16:37:13+00:00'
+      type: quote
+      metrics:
+        like_count: 17
+        reply_count: 4
+        repost_count: 5
+        view_count: 1272
+    - id: 582676125
+      twitter_id: '1882825284367323378'
+      twitter_user_id: '1736748346566459392'
+      content: 'What if you imagined a cat eating a pizza with pineapple….and AI brought
+        it to life?
+
+
+        We’re bringing Hunyuan, Tencent’s open-source video model, to Heurist Imagine.
+        It is real now.
+
+
+        Early access is free for those holding 10,000 $HEU
+
+
+        Link in comments. '
+      mentioned_at: '2025-01-24T16:18:23+00:00'
+      type: post
+      metrics:
+        like_count: 91
+        reply_count: 11
+        repost_count: 26
+        view_count: 6857
     metadata:
-      total: 78
-      cursor: FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoAxZMdjdsV2N5TVMzLU9LZkNFOWVWVlBBAAAAAABW4IoWWXBqUmN2eXlUNUdjakhFOGZ5XzZ5ZxZBNTBtYmVEM1RUR2NycUdHUE9GMnN3AAAAAAB1GqsWVERUVURyRHFRZ2VYY1F0cVh1UWloZxZaZGpxTGV6WlFNNkxlNUhfMVotQy1RAAAAAAB4K-QWVGV6RmdEOTNUT2lPN1JwZFROaC11QQ==
-  timestamp: '2025-02-13T07:34:57.164148'
-get_mentions_test:
-  test_name: Get Mentions
-  description: Retrieves recent mentions from the database.
-  input:
-    limit: 100
-    offset: 0
-  output:
-    success: true
-    data: []
-    metadata:
-      total: 0
-      limit: 100
-      offset: 0
-  timestamp: '2025-02-13T07:34:57.527294'
-top_mentions_test:
-  test_name: Top Mentions
-  description: Finds the most discussed mentions for a specific ticker.
-  input:
-    ticker: $HEU
-    time_window: 7d
-    page: 1
-    page_size: 50
-    include_account_details: false
-  output:
-    success: true
-    data:
-      data: []
-      total: 0
-      page: 1
-      pageSize: 50
-  timestamp: '2025-02-13T07:34:57.684516'
-trending_tokens_test:
-  test_name: Trending Tokens
-  description: Lists tokens trending within the last 24 hours based on mentions.
-  input:
-    time_window: 24h
-    page: 1
-    page_size: 50
-    min_mentions: 5
-  output:
+      total: 18
+      cursor: FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoBhZiTE92cVNhaFFxcXJoRmMzdnMyUmpnAAAAAAAC8nIWMnhMaHZvUzhSVHlsODVvNmd1Y2RTZxZLdXZfMzhtWVJNU2FYWnZWdVhnV0J3AAAAAAAEO70WdEpyN0JSc3NRM2V5b2NOVUxOYjdSZxZiTE92cVNhaFFxcXJoRmMzdnMyUmpnAAAAAAAC8nMWMnhMaHZvUzhSVHlsODVvNmd1Y2RTZxZLdXZfMzhtWVJNU2FYWnZWdVhnV0J3AAAAAAAEO78WdEpyN0JSc3NRM2V5b2NOVUxOYjdSZxZiTE92cVNhaFFxcXJoRmMzdnMyUmpnAAAAAAAC8nEWMnhMaHZvUzhSVHlsODVvNmd1Y2RTZxZLdXZfMzhtWVJNU2FYWnZWdVhnV0J3AAAAAAAEO74WdEpyN0JSc3NRM2V5b2NOVUxOYjdSZw==
+input_trending:
+  query: What are the current trending tokens in the last 24 hours?
+output_trending:
+  response: "**Trending Tokens in the Last 24 Hours**\n\n### Top Tokens by Mention\
+    \ Volume\n\n1. **Libra**:\n\t* **Mention Count**: 497\n\t* **Engagement Metrics**:\n\
+    \t\t+ **Previous Count**: 370\n\t\t+ **Change Percent**: +34.32%\n2. **Ethereum\
+    \ (ETH)**:\n\t* **Mention Count**: 458 (includes 39 mentions of \"#ethereum\"\
+    \ and 39 of \"ethereum\")\n\t* **Engagement Metrics**:\n\t\t+ **Previous Count**:\
+    \ 124\n\t\t+ **Change Percent**: +269.35% ( ETH ), +105.26% ( ethereum ), +116.67%\
+    \ ( #ethereum )\n3. **Solana (SOL)**:\n\t* **Mention Count**: 284\n\t* **Engagement\
+    \ Metrics**:\n\t\t+ **Previous Count**: 132\n\t\t+ **Change Percent**: +115.15%\n\
+    \n### Notable Trends or Patterns\n\n* **Surging Interest in Ethereum**: ETH saw\
+    \ a significant spike in mentions, indicating heightened community engagement\
+    \ or interest, possibly due to recent developments or announcements.\n* **Libra\
+    \ Maintains High Visibility**: Despite a more modest increase compared to ETH,\
+    \ Libra's high mention count suggests sustained attention, which could be due\
+    \ to its wide recognition or ongoing discussions about its potential impact.\n\
+    * **Altcoin Mentions**: Tokens like SOL, and mentions of \"#altcoins\" and \"\
+    altcoins\", show substantial percentage increases, hinting at a broader interest\
+    \ in alternative cryptocurrencies beyond the major players.\n\n### Significant\
+    \ Changes or Patterns\n\n* **New Entrants with High Growth**: Tokens like \"usd\"\
+    , \"usdt\", \"relax\", and \"welf\" show extremely high percentage growth, indicating\
+    \ sudden spikes in interest. These could be worth monitoring for emerging trends\
+    \ or news-driven attention.\n* **Decreasing Interest**: Tokens like \"kaito\"\
+    , \"avax\", \"ket\", and \"hype\" saw decreases in mention counts, suggesting\
+    \ waning interest or a shift in community focus away from these tokens."
+  data:
     success: true
     data:
       total: 50
       page: 1
       pageSize: 50
       data:
-      - token: btc
-        current_count: 318
-        previous_count: 317
-        change_percent: 0.32
+      - token: libra
+        current_count: 497
+        previous_count: 370
+        change_percent: 34.32
       - token: eth
-        current_count: 289
-        previous_count: 288
-        change_percent: 0.35
-      - token: bitcoin
-        current_count: 213
-        previous_count: 298
-        change_percent: -28.52
-      - token: '#bitcoin'
-        current_count: 206
-        previous_count: 290
-        change_percent: -28.97
+        current_count: 458
+        previous_count: 124
+        change_percent: 269.35
       - token: sol
-        current_count: 175
-        previous_count: 203
-        change_percent: -13.79
-      - token: flow
-        current_count: 168
-        previous_count: 135
-        change_percent: 24.44
-      - token: bnb
-        current_count: 161
-        previous_count: 79
-        change_percent: 103.8
-      - token: wink
-        current_count: 96
-        previous_count: 11
-        change_percent: 772.73
-      - token: hood
-        current_count: 93
-        previous_count: 20
-        change_percent: 365
-      - token: dog
-        current_count: 84
-        previous_count: 170
-        change_percent: -50.59
-      - token: giga
-        current_count: 74
-        previous_count: 89
-        change_percent: -16.85
-      - token: bera
-        current_count: 66
-        previous_count: 105
-        change_percent: -37.14
-      - token: '#dedeportes'
-        current_count: 64
-        previous_count: 23
-        change_percent: 178.26
-      - token: dedeportes
-        current_count: 64
-        previous_count: 23
-        change_percent: 178.26
-      - token: jailstool
-        current_count: 64
-        previous_count: 120
-        change_percent: -46.67
-      - token: s
-        current_count: 64
-        previous_count: 41
-        change_percent: 56.1
-      - token: usd
-        current_count: 57
-        previous_count: 18
-        change_percent: 216.67
-      - token: '#jailstool'
-        current_count: 55
-        previous_count: 106
-        change_percent: -48.11
-      - token: gfm
-        current_count: 52
-        previous_count: 34
-        change_percent: 52.94
-      - token: xrp
-        current_count: 51
-        previous_count: 67
-        change_percent: -23.88
-      - token: pengu
-        current_count: 48
-        previous_count: 43
-        change_percent: 11.63
-      - token: tsla
-        current_count: 48
-        previous_count: 66
-        change_percent: -27.27
-      - token: tst
-        current_count: 48
-        previous_count: 52
-        change_percent: -7.69
-      - token: spx
-        current_count: 47
-        previous_count: 45
-        change_percent: 4.44
-      - token: '#binance'
-        current_count: 46
-        previous_count: 32
-        change_percent: 43.75
-      - token: binance
-        current_count: 46
-        previous_count: 32
-        change_percent: 43.75
-      - token: usdc
-        current_count: 46
-        previous_count: 56
-        change_percent: -17.86
-      - token: '#diarioelsalvador'
-        current_count: 44
-        previous_count: 33
-        change_percent: 33.33
-      - token: diarioelsalvador
-        current_count: 44
-        previous_count: 33
-        change_percent: 33.33
-      - token: hype
-        current_count: 44
-        previous_count: 57
-        change_percent: -22.81
-      - token: link
-        current_count: 41
-        previous_count: 41
-        change_percent: 0
-      - token: sui
-        current_count: 40
-        previous_count: 27
-        change_percent: 48.15
-      - token: usdt
-        current_count: 40
-        previous_count: 48
-        change_percent: -16.67
-      - token: ket
-        current_count: 39
-        previous_count: 98
-        change_percent: -60.2
-      - token: arc
-        current_count: 38
-        previous_count: 50
-        change_percent: -24
-      - token: tao
-        current_count: 36
-        previous_count: 88
-        change_percent: -59.09
+        current_count: 284
+        previous_count: 132
+        change_percent: 115.15
+      - token: btc
+        current_count: 261
+        previous_count: 154
+        change_percent: 69.48
+      - token: bitcoin
+        current_count: 200
+        previous_count: 131
+        change_percent: 52.67
+      - token: '#bitcoin'
+        current_count: 193
+        previous_count: 127
+        change_percent: 51.97
+      - token: kaito
+        current_count: 124
+        previous_count: 204
+        change_percent: -39.22
       - token: trump
-        current_count: 36
-        previous_count: 56
-        change_percent: -35.71
-      - token: ron
-        current_count: 35
-        previous_count: 16
-        change_percent: 118.75
-      - token: '#breaking'
-        current_count: 34
-        previous_count: 25
-        change_percent: 36
-      - token: breaking
-        current_count: 34
-        previous_count: 25
-        change_percent: 36
-      - token: layer
-        current_count: 33
-        previous_count: 139
-        change_percent: -76.26
-      - token: avax
-        current_count: 32
+        current_count: 95
+        previous_count: 48
+        change_percent: 97.92
+      - token: s
+        current_count: 81
         previous_count: 37
-        change_percent: -13.51
-      - token: cake
-        current_count: 30
-        previous_count: 7
-        change_percent: 328.57
+        change_percent: 118.92
+      - token: pepe
+        current_count: 76
+        previous_count: 24
+        change_percent: 216.67
+      - token: melania
+        current_count: 70
+        previous_count: 47
+        change_percent: 48.94
+      - token: mlg
+        current_count: 59
+        previous_count: 22
+        change_percent: 168.18
+      - token: spx
+        current_count: 57
+        previous_count: 15
+        change_percent: 280
+      - token: giga
+        current_count: 56
+        previous_count: 42
+        change_percent: 33.33
+      - token: bera
+        current_count: 54
+        previous_count: 20
+        change_percent: 170
+      - token: joe
+        current_count: 51
+        previous_count: 15
+        change_percent: 240
+      - token: ron
+        current_count: 46
+        previous_count: 16
+        change_percent: 187.5
+      - token: dog
+        current_count: 45
+        previous_count: 26
+        change_percent: 73.08
+      - token: usdc
+        current_count: 45
+        previous_count: 28
+        change_percent: 60.71
+      - token: bnb
+        current_count: 42
+        previous_count: 42
+        change_percent: 0
+      - token: tao
+        current_count: 41
+        previous_count: 24
+        change_percent: 70.83
       - token: '#ethereum'
-        current_count: 29
-        previous_count: 42
-        change_percent: -30.95
+        current_count: 39
+        previous_count: 18
+        change_percent: 116.67
       - token: ethereum
-        current_count: 29
-        previous_count: 42
-        change_percent: -30.95
-      - token: kween
-        current_count: 29
-        previous_count: 65
-        change_percent: -55.38
-      - token: printr
-        current_count: 29
+        current_count: 39
+        previous_count: 19
+        change_percent: 105.26
+      - token: doge
+        current_count: 38
+        previous_count: 21
+        change_percent: 80.95
+      - token: hype
+        current_count: 38
+        previous_count: 52
+        change_percent: -26.92
+      - token: xrp
+        current_count: 38
+        previous_count: 41
+        change_percent: -7.32
+      - token: '#altcoins'
+        current_count: 36
+        previous_count: 17
+        change_percent: 111.76
+      - token: altcoins
+        current_count: 36
+        previous_count: 17
+        change_percent: 111.76
+      - token: mog
+        current_count: 35
+        previous_count: 11
+        change_percent: 218.18
+      - token: pengu
+        current_count: 35
+        previous_count: 19
+        change_percent: 84.21
+      - token: avax
+        current_count: 34
+        previous_count: 41
+        change_percent: -17.07
+      - token: broccoli
+        current_count: 34
+        previous_count: 24
+        change_percent: 41.67
+      - token: '#consensushk'
+        current_count: 32
+        previous_count: 10
+        change_percent: 220
+      - token: consensushk
+        current_count: 32
+        previous_count: 10
+        change_percent: 220
+      - token: ket
+        current_count: 28
+        previous_count: 39
+        change_percent: -28.21
+      - token: usd
+        current_count: 27
+        previous_count: 4
+        change_percent: 575
+      - token: relax
+        current_count: 26
         previous_count: 7
-        change_percent: 314.29
-      - token: ape
-        current_count: 27
-        previous_count: 9
-        change_percent: 200
-      - token: captainbnb
-        current_count: 27
-        previous_count: 8
-        change_percent: 237.5
-      - token: '#captainbnb'
+        change_percent: 271.43
+      - token: usdt
+        current_count: 26
+        previous_count: 7
+        change_percent: 271.43
+      - token: kween
         current_count: 25
+        previous_count: 17
+        change_percent: 47.06
+      - token: tst
+        current_count: 25
+        previous_count: 14
+        change_percent: 78.57
+      - token: jup
+        current_count: 24
+        previous_count: 7
+        change_percent: 242.86
+      - token: pi
+        current_count: 23
         previous_count: 8
-        change_percent: 212.5
-  timestamp: '2025-02-13T07:34:57.950975'
-account_stats_test:
-  test_name: Account Smart Stats
-  description: Retrieves engagement and analytics for a specific account.
-  input:
-    username: heurist_ai
-  output:
+        change_percent: 187.5
+      - token: boyz
+        current_count: 22
+        previous_count: 1
+        change_percent: 2100
+      - token: shell
+        current_count: 22
+        previous_count: 8
+        change_percent: 175
+      - token: sui
+        current_count: 22
+        previous_count: 6
+        change_percent: 266.67
+      - token: wink
+        current_count: 22
+        previous_count: 24
+        change_percent: -8.33
+      - token: '#broccoli'
+        current_count: 20
+        previous_count: 9
+        change_percent: 122.22
+      - token: welf
+        current_count: 19
+        previous_count: 1
+        change_percent: 1800
+      - token: '#breaking'
+        current_count: 18
+        previous_count: 1
+        change_percent: 1700
+      - token: breaking
+        current_count: 18
+        previous_count: 1
+        change_percent: 1700
+input_account:
+  query: Analyze the Twitter account @heurist_ai
+output_account:
+  response: "**Twitter Account Analysis: @heurist_ai**\n\n### **Engagement Metrics\
+    \ Summary**\n\n* **Smart Following Count**: 471 (indicating a curated or highly\
+    \ engaged follower base)\n* **Average Engagement**: 10,195.14 (exceptionally high,\
+    \ suggesting content resonates strongly with the audience)\n* **Follower Engagement\
+    \ Ratio**: 0.3014 (or approximately 30.14% of followers engage with the content,\
+    \ indicating a highly interactive community)\n\n### **Influential Connections\
+    \ Highlight**\n\n* **Note**: Direct influential connections data is not provided\
+    \ in the given output. However, based on the high engagement metrics:\n\t+ **Inferred\
+    \ Influence**: @heurist_ai likely has significant influence within its niche,\
+    \ given the high engagement rates.\n\t+ **Potential Influencer Connections**:\
+    \ To accurately identify key influencers connected to @heurist_ai, additional\
+    \ data (e.g., mentions, replies, or collaboration history) would be necessary.\n\
+    \n### **Posting Patterns and Impact**\n\n* **Note**: The provided data does not\
+    \ include posting patterns (e.g., frequency, timing, content types). However,\
+    \ based on the engagement metrics:\n\t+ **Inferred Posting Impact**: Content posted\
+    \ by @heurist_ai appears to have a substantial impact on its audience, as evidenced\
+    \ by the exceptionally high average engagement.\n\t+ **Recommended Analysis**:\
+    \ To understand posting patterns and optimize content strategy, analyzing tweet\
+    \ timing, content variety, and engagement rates over time would be beneficial.\n\
+    \n**Recommendations for Further Analysis**:\n\n1. **Content Analysis**: Examine\
+    \ the types of content (e.g., topics, formats) that yield the highest engagement\
+    \ to refine @heurist_ai's content strategy.\n2. **Network Analysis**: Utilize\
+    \ additional ELFA API endpoints to uncover influential connections, collaborations,\
+    \ or mentions that could further amplify @heurist_ai's reach and impact.\n3. **Temporal\
+    \ Engagement Analysis**: Study engagement patterns over time to identify peak\
+    \ engagement periods and optimize posting schedules accordingly."
+  data:
     success: true
     data:
-      smartFollowingCount: 470
-      averageEngagement: 14413.555555555555
-      followerEngagementRatio: 0.4278161988529742
-  timestamp: '2025-02-13T07:34:58.263691'
+      smartFollowingCount: 471
+      averageEngagement: 10195.142857142857
+      followerEngagementRatio: 0.30139959963172874
