@@ -11,8 +11,9 @@ def tool(description: str):
         func.name = func.__name__
         func.description = func.__doc__ if func.__doc__ != inspect._empty else description
 
-        # Generate the parameter schema from the original function
+        # generate the parameter schema without agent_context
         signature = inspect.signature(func)
+        parameters = {k: v for k, v in signature.parameters.items() if k != "agent_context"}
         func.args_schema = {
             "type": "object",
             "properties": {
@@ -20,19 +21,18 @@ def tool(description: str):
                     "type": str(param_type.annotation.__name__).lower(),
                     "description": str(param_type.annotation) if param_type.annotation != inspect._empty else "No type specified"
                 }
-                for param, param_type in signature.parameters.items()
+                for param, param_type in parameters.items()
             },
             "required": [
                 param
-                for param, param_type in signature.parameters.items()
+                for param, param_type in parameters.items()
                 if param_type.default == inspect._empty
             ]
         }
         
         async def wrapper(args: Dict[str, Any], agent_context: Any):
-            # Remove agent_context from args if it exists
-            if "agent_context" in args:
-                args["agent_context"] = agent_context   
+            # re-add agent context
+            args["agent_context"] = agent_context   
             result = await func(**args) if inspect.iscoroutinefunction(func) else func(**args)
             return result
             
