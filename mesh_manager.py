@@ -64,29 +64,55 @@ class AgentLoader:
             "last_updated": datetime.now(UTC).isoformat(),
             "agents": {}
         }
-        
+
         for agent_id, agent_cls in agents_dict.items():
+            logger.info(f"Creating metadata for agent {agent_id}")
             agent = agent_cls()
-            metadata["agents"][agent_id] = {
-                "metadata": agent.metadata,
-                "module": agent_cls.__module__.split('.')[-1]
-            }
-        
+            
+            # Get base inputs from agent metadata
+            inputs = agent.metadata.get('inputs', [])
+
+            # Add tool-related inputs if tools exist
+            if hasattr(agent, "get_tool_schemas") and callable(agent.get_tool_schemas):
+                tools = agent.get_tool_schemas()
+                if tools:
+                    inputs.extend([
+                        {
+                            'name': 'tool',
+                            'description': f'Directly specify which tool to call: {", ".join(t["function"]["name"] for t in tools)}. Bypasses LLM.',
+                            'type': 'str',
+                            'required': False
+                        },
+                        {
+                            'name': 'tool_arguments',
+                            'description': 'Arguments for the tool call as a dictionary',
+                            'type': 'dict',
+                            'required': False,
+                            'default': {}
+                        }
+                    ])
+                    # Update agent metadata with tool-derived inputs
+                    agent.metadata['inputs'] = inputs
+
+                    # Compose agent info
+                    metadata["agents"][agent_id] = {
+                        "metadata": agent.metadata,
+                        "module": agent_cls.__module__.split('.')[-1],
+                        "tools": tools
+                    }
+
         return metadata
     
     def _upload_metadata(self, metadata: Dict) -> None:
         """Upload metadata to S3"""
-        try:
-            metadata_json = json.dumps(metadata, indent=2)
-            self.s3_client.put_object(
-                Bucket=self.config.s3_bucket,
-                Key='mesh_agents_metadata.json',
-                Body=metadata_json,
-                ContentType='application/json'
-            )
-            logger.info("Successfully uploaded agents metadata to S3")
-        except Exception as e:
-            logger.error(f"Failed to upload metadata to S3: {e}")
+        metadata_json = json.dumps(metadata, indent=2)
+        self.s3_client.put_object(
+            Bucket=self.config.s3_bucket,
+            Key='mesh_agents_metadata.json',
+            Body=metadata_json,
+            ContentType='application/json'
+        )
+        logger.info("Successfully uploaded agents metadata to S3")
 
     def load_agents(self) -> Dict[str, Type[MeshAgent]]:
         agents_dict = {}
@@ -126,8 +152,11 @@ class AgentLoader:
             if import_errors:
                 logger.warning(f"Import errors: {', '.join(import_errors)}")
             
-            metadata = self._create_metadata(agents_dict)
-            self._upload_metadata(metadata)
+            try:
+                metadata = self._create_metadata(agents_dict)
+                self._upload_metadata(metadata)
+            except Exception as e:
+                logger.error(f"Failed to upload metadata to S3: {e}")
             
             return agents_dict
             

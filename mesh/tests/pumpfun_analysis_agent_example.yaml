@@ -5,7 +5,93 @@ creation:
     parameters:
       interval: hours
       offset: 1
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: "Here are the concise analyses for each new Solana token creation event\
+      \ in the last hour, focusing on the requested points (Basic token info, Initial\
+      \ supply, and Creator details):\n\n**Tokens created at 2025-02-20T04:00:00Z**\n\
+      \n1. **Shift AI**\n\t* Basic token info: Name - Shift AI, Symbol - Shift, Mint\
+      \ Address - ESH3wTy4AAMv8BLuR6ieqCBceqesF1S56mbpQyccpump\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: EknRrcsWeAjJVWuQepfsANtKHYCNhBNmBJfRaBzRgyKD\n\
+      \n2. **Down Wick**\n\t* Basic token info: Name - Down Wick, Symbol - DICK, Mint\
+      \ Address - W5evGSnrBQxXSvD5BEvfVpePPUCCaMudAFCAutLpump\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: 5wndZMmZzydwLvhhGWcm2pwztDGv6qFcrhwbKjTGeJ4f\n\
+      \n3. **#1 Most Famous Police Cat**\n\t* Basic token info: Name - #1 Most Famous\
+      \ Police Cat, Symbol - DONUT, Mint Address - 9FDudpF9nLqHgFmGqGpbYc5h9T7g4FaMhDdHoQUEpump\n\
+      \t* Initial supply: 1,000,000,000.000000\n\t* Creator: EmReW423n4mQZ3T9RSuEtDmuyaNkh8Mf7i9xSjA1wTvB\n\
+      \n4. **FREE QUAVO**\n\t* Basic token info: Name - FREE QUAVO, Symbol - freequavo,\
+      \ Mint Address - H3hvMVSKdg885eyS4fWMn2DmXaNUhrevHFFGdfLjpump\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: CSY77qKcj5SLxbFotQk8Xb7XU3AUE75SYgmLxZMxWc4h\n\
+      \n**Tokens created at 2025-02-20T03:00:00Z**\n\n1. **Air Force One plush**\n\
+      \t* Basic token info: Name - Air Force One plush, Symbol - AFOP, Mint Address\
+      \ - 7j6azuHR3ffNWhHahBMaxZFQLoN3Po2oAEJ17rvopump\n\t* Initial supply: 1,000,000,000.000000\n\
+      \t* Creator: EMr8F3neXwwkYPWFsZa5rrk3u2uLwf7MaoCL5JFCitTn\n\n2. **GROK3 CAT\
+      \ MASCOT**\n\t* Basic token info: Name - GROK3 CAT MASCOT, Symbol - MILLOW,\
+      \ Mint Address - 5akJSrfYqnidQxngc7HaNqcQWMMusH59e3AXCLbmZFA5\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: 36DWP52MVRDooYNrcRVDyoCh2R1fPXCYqKJQYg9pFQoE\n\
+      \n3. **Air Force One Plush (Duplicate Name, Different Symbol)**\n\t* Basic token\
+      \ info: Name - Air Force One Plush, Symbol - AF1, Mint Address - 4rzLRYh6Qa7snwaXD7RMvapd1TkhUy4dcB19AV5TG5Xp\n\
+      \t* Initial supply: 1,000,000,000.000000\n\t* Creator: JEWpfni1FwYF4MeavU242tct7wc5VeVyKCfxkSfquLP\n\
+      \n4. **rvlsdotcom**\n\t* Basic token info: Name - rvlsdotcom, Symbol - rvls,\
+      \ Mint Address - CajFwiDLXCUmQg1D4giuqWzaQwtuY3Dpg4nZcAhrpump\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: 6EWUq4LYcaACrjUpvraAuzMBGi2FH72Le4tkqKoFeCvb\n\
+      \n5. **Bequest Finance**\n\t* Basic token info: Name - Bequest Finance, Symbol\
+      \ - BQST, Mint Address - HWX7n2jNq3MReAspc9dR6EzDyEp6UXfGeDCbBWNxpump\n\t* Initial\
+      \ supply: 1,000,000,000.000000\n\t* Creator: 9q51MpbxU3vuPUyZp5H9RfoKhyQyj3LSXmpmTMpff1Vt\n\
+      \n6. **dripster.fun**\n\t* Basic token info: Name - dripster.fun, Symbol - DRIP,\
+      \ Mint Address - 2rFHCZv6Zhz6yED4VwBdLNfDcG6yxPxcy5yKS51Fpump\n\t* Initial supply:\
+      \ 1,000,000,000.000000\n\t* Creator: 71jpBpCkJw6dQoEcGMDDzG6bZryUncr6csMmgUe1vcgE"
+    data:
+      tokens:
+      - name: 'Shift AI '
+        symbol: Shift
+        mint_address: ESH3wTy4AAMv8BLuR6ieqCBceqesF1S56mbpQyccpump
+        amount: '1000000000.000000'
+        signer: EknRrcsWeAjJVWuQepfsANtKHYCNhBNmBJfRaBzRgyKD
+      - name: Down Wick
+        symbol: DICK
+        mint_address: W5evGSnrBQxXSvD5BEvfVpePPUCCaMudAFCAutLpump
+        amount: '1000000000.000000'
+        signer: 5wndZMmZzydwLvhhGWcm2pwztDGv6qFcrhwbKjTGeJ4f
+      - name: '#1 Most Famous Police Cat'
+        symbol: DONUT
+        mint_address: 9FDudpF9nLqHgFmGqGpbYc5h9T7g4FaMhDdHoQUEpump
+        amount: '1000000000.000000'
+        signer: EmReW423n4mQZ3T9RSuEtDmuyaNkh8Mf7i9xSjA1wTvB
+      - name: FREE QUAVO
+        symbol: freequavo
+        mint_address: H3hvMVSKdg885eyS4fWMn2DmXaNUhrevHFFGdfLjpump
+        amount: '1000000000.000000'
+        signer: CSY77qKcj5SLxbFotQk8Xb7XU3AUE75SYgmLxZMxWc4h
+      - name: Air Force One plush
+        symbol: AFOP
+        mint_address: 7j6azuHR3ffNWhHahBMaxZFQLoN3Po2oAEJ17rvopump
+        amount: '1000000000.000000'
+        signer: EMr8F3neXwwkYPWFsZa5rrk3u2uLwf7MaoCL5JFCitTn
+      - name: GROK3 CAT MASCOT
+        symbol: MILLOW
+        mint_address: 5akJSrfYqnidQxngc7HaNqcQWMMusH59e3AXCLbmZFA5
+        amount: '1000000000.000000'
+        signer: 36DWP52MVRDooYNrcRVDyoCh2R1fPXCYqKJQYg9pFQoE
+      - name: Air Force One Plush
+        symbol: AF1
+        mint_address: 4rzLRYh6Qa7snwaXD7RMvapd1TkhUy4dcB19AV5TG5Xp
+        amount: '1000000000.000000'
+        signer: JEWpfni1FwYF4MeavU242tct7wc5VeVyKCfxkSfquLP
+      - name: rvlsdotcom
+        symbol: rvls
+        mint_address: CajFwiDLXCUmQg1D4giuqWzaQwtuY3Dpg4nZcAhrpump
+        amount: '1000000000.000000'
+        signer: 6EWUq4LYcaACrjUpvraAuzMBGi2FH72Le4tkqKoFeCvb
+      - name: Bequest Finance
+        symbol: BQST
+        mint_address: HWX7n2jNq3MReAspc9dR6EzDyEp6UXfGeDCbBWNxpump
+        amount: '1000000000.000000'
+        signer: 9q51MpbxU3vuPUyZp5H9RfoKhyQyj3LSXmpmTMpff1Vt
+      - name: dripster.fun
+        symbol: DRIP
+        mint_address: 2rFHCZv6Zhz6yED4VwBdLNfDcG6yxPxcy5yKS51Fpump
+        amount: '1000000000.000000'
+        signer: 71jpBpCkJw6dQoEcGMDDzG6bZryUncr6csMmgUe1vcgE
 metrics:
   input:
     query_type: metrics
@@ -13,21 +99,31 @@ metrics:
     parameters:
       token_address: 98mb39tPFKQJ4Bif8iVg9mYb9wsfPZgpgN1sxoVTpump
       usdc_address: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: Okay, I can help you with that. Which token are you interested in? Please
+      provide the token mint address and the USDC address.
+    data: {}
 holders:
   input:
     query_type: holders
     query: Show me the top token holders and their balances
     parameters:
       token_address: 2GxdEZQ5d9PsUqyGy43qv4fmNJWrnLp6qY4dTyNepump
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: Please provide the token address you would like me to analyze.
+    data:
+      holders: []
 buyers:
   input:
     query_type: buyers
     query: Show me the first 100 buyers of this token
     parameters:
       token_address: 2Z4FzKBcw48KBD2PaR4wtxo4sYGbS7QqTQCLoQnUpump
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: Okay, I'm ready to analyze the first 100 buyers of a token. Please provide
+      the token address.
+    data:
+      buyers: []
 holder_status:
   input:
     query_type: holder_status
@@ -37,11 +133,23 @@ holder_status:
       buyer_addresses:
       - ApRJBQEKfmcrViQkH94BkzRFUGWtA8uC71DXu6USdd3n
       - 9nG4zw1jVJFpEtSLmbGQpTnpG2TiKfLXWkkTyyRvxTt6
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: Okay, I can help you analyze the behavior of the first 100 buyers of
+      a specific token. I need the token address to proceed. Also, I need the list
+      of the first 100 buyer addresses. Please provide these details.
+    data:
+      holder_statuses: []
 top_traders:
   input:
     query_type: top_traders
     query: Show me the top traders for this token on Pump Fun DEX
     parameters:
       token_address: FbhypAF9LL93bCZy9atRRfbdBMyJAwBarULfCK3roP93
-  error: '''PumpFunTokenAgent'' object has no attribute ''handle_message'''
+  output:
+    response: Okay, I'll need the token address to analyze the top traders. Once you
+      provide the token address, I'll use the `run_top_traders_query` function to
+      get the data and then analyze it for trading volume patterns, buy/sell ratios,
+      and any notable trading behaviors. Finally, I'll present a concise summary of
+      the token's most active traders.
+    data:
+      traders: []

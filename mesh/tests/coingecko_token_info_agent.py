@@ -16,7 +16,7 @@ async def run_agent():
     try:
         # Test with a query mentioning CoinGecko ID
         agent_input = {
-            'query': 'Get information about ethereum'
+            'query': 'Get information about MONA'
         }
         
         agent_output = await agent.handle_message(agent_input)
@@ -24,7 +24,7 @@ async def run_agent():
 
         # Test with query mentioned the token name 
         agent_input_name = {
-            'query': 'analyze ETH'
+            'query': 'analyze HEU'
         }
         
         agent_output_name = await agent.handle_message(agent_input_name)
@@ -60,4 +60,4 @@ async def run_agent():
         await agent.cleanup()
 
 if __name__ == "__main__":
-    asyncio.run(run_agent()) 
+    asyncio.run(run_agent())
